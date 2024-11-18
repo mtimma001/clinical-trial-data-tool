@@ -7,7 +7,14 @@ app.secret_key = 'my-super-secret'
 
 # Register Blueprints
 from app.blueprints.participants import participants
+from app.blueprints.trials import trials
+from app.blueprints.outcomes import outcomes
+from app.blueprints.visuals import visuals
+
 app.register_blueprint(participants)
+app.register_blueprint(trials)
+app.register_blueprint(outcomes)
+app.register_blueprint(visuals)
 
 from . import routes
 
